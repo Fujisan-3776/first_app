@@ -1,0 +1,12 @@
+<h1>トップページ</h1>
+<%= link_to '新規投稿', '/posts/new' %>
+<% @posttt.each do |pos| %>
+    <div class="post">
+      <div class="post-date">
+        投稿日時：<%= pos.created_at %>
+      </div>
+      <div class="post-content">
+        <%= pos.content %>
+      </div>
+    </div>
+<% end %>
